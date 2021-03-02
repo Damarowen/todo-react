@@ -4,21 +4,27 @@ import TasksList from "./Component/TaskList";
 
 const App = () => {
   const [newTask, setNewTask] = useState({});
-  const handleChange = ({ target }) => {
+  const [allTasks, setAllTasts] = useState([]);
+
+  { //* target is equal to event.target
+   }
+  const handleChange = ({target }) => {
     const { name, value } = target;
-    setNewTask((prev) => ({ ...prev, id: Date.now(), [name]: value }));
+    {//* set name attribute as key
+    }
+    setNewTask(prev => ({ ...prev,  [name]: value , id: Date.now() }));
   };
 
-  const [allTasks, setAllTasts] = useState([]);
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!newTask.title) return;
-    setAllTasts((prev) => [newTask, ...prev]);
+    if (!newTask.title) return alert('please add task');
+    setAllTasts((prev) => [ newTask , ...prev]);
     setNewTask({});
   };
+
   const handleDelete = (taskIdToRemove) => {
     setAllTasts((prev) => prev.filter(
-      (task) => task.id !== taskIdToRemove
+      task => task.id !== taskIdToRemove
     ));
   };
 

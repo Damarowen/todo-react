@@ -1,8 +1,5 @@
 html, body {
-	height: 100%;
-  background-color: #ffffff;
   text-align: center;
-  margin: 0;
 }
 
 * {
@@ -10,12 +7,6 @@ html, body {
   box-sizing: border-box;
 }
 
-#app {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	padding: 8px;
-}
 
 h1 {
   margin: 8px 0;
@@ -25,6 +16,8 @@ form {
   display: flex;
   flex-direction: column;
   position: relative;
+  width: 50%;
+  margin: auto;
 }
 
 input,
@@ -44,15 +37,14 @@ ul {
   text-align: center;
 }
 
-ul {
-  padding: 0;
-}
+
 
 li {
   background-color: Cornsilk;
   border: 1px solid BurlyWood;
   border-radius: 5px 2px;
-  margin: 8px 0;
+  margin: 20px auto;
+  width: 50%;
 }
 
 li div {
@@ -73,7 +65,7 @@ li div button {
 
 li div button:hover,
 li div button:focus {
-  box-shadow: 0 0 1px black;
+  box-shadow: 2px 2px 2px black;
 }
 
 li h2 {

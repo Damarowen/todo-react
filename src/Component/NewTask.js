@@ -1,5 +1,6 @@
 
 const NewTask = ({ newTask, handleChange, handleSubmit }) => {
+
   return (
     <form onSubmit={handleSubmit}>
       <input
@@ -8,6 +9,7 @@ const NewTask = ({ newTask, handleChange, handleSubmit }) => {
         value={newTask.title || ""}
         onChange={handleChange}
       />
+      {console.log(newTask)}
       {!newTask.title ? null : (
         <>
           <textarea
